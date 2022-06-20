@@ -8,7 +8,7 @@ import { useNavigate } from 'react-router-dom'
 const Home = () => {
 
 
-
+    
 
     const navigate = useNavigate()
 
@@ -18,6 +18,8 @@ const Home = () => {
     const [categories,setCategories] = useState([])
 
     const products = useSelector(state => state.products?.data?.products)
+
+    
 
     useEffect(() => {
         dispatch(getProducts())

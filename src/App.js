@@ -1,6 +1,6 @@
 import { useSelector } from 'react-redux';
 import {HashRouter,Routes,Route} from 'react-router-dom'
-import LoadingScreen from './components/LoadingScreen';
+import {LoadingScreen,NavBar} from './components/index';
 import {Home,Login,ProductsDetail,Purshases} from './pages/index'
 import './index.css'
 
@@ -15,6 +15,7 @@ function App() {
     <div className="App">
       <HashRouter>
         {isLoading && <LoadingScreen/>}
+        <NavBar/>
         <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/login" element={<Login/>} />
