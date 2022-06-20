@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector} from 'react-redux';
 import { filterTitle, getProducts, filterCategories} from '../store/slices/products.slice';
 import { useNavigate } from 'react-router-dom'
-
+import '../styles/home.css'
 
 const Home = () => {
 

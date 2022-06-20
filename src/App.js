@@ -2,8 +2,7 @@ import { useSelector } from 'react-redux';
 import {HashRouter,Routes,Route} from 'react-router-dom'
 import {LoadingScreen,NavBar} from './components/index';
 import {Home,Login,ProductsDetail,Purshases} from './pages/index'
-import './index.css'
-
+import './styles/App.css'
 
 function App() {
 
