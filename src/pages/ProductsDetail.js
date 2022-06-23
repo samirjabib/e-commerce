@@ -30,7 +30,7 @@ const ProductsDetail = () => {
             .then(res =>{
                 const productSearched = res.data.data.products.find( productsItem => productsItem.id === Number(id))
                 setProduct(productSearched)
-                dispatch(filterCategory(productSearched.category.id))
+                dispatch(filterCategory(productSearched.category?.id))
             })
             
     },[dispatch,id])
@@ -56,7 +56,7 @@ const ProductsDetail = () => {
                 <h2>Similar Products</h2>
                 {
                     productsList?.map( product => (
-                        <div key={product.id} onClick={() => navigate(`/product/${product.id}`)}>
+                        <div key={product.id} onClick={() => navigate(`/product/${product?.id}`)}>
                             <h3>{product.title}</h3>
                             <img src={product.productImgs?.[0]} alt="product-similar"/>
                         </div>
